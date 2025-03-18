@@ -16,9 +16,6 @@ def fetch_news(
     response = requests.get(url, params=params)
     if response.status_code == 200:
         return response.json()
-    else:
-        print(f"Ошибка запроса: {response.status_code}")
-        return None
 
 
 def display_news(news_data):
